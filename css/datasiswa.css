@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    resize: none;
+    outline: none;
+    border: none;
+  }
+
+
+  /* style */
+  body { 
+    background-color: rgba(235, 235, 235);
+  }
+  /* navbar start */
+  nav {
+    height: 10vh;
+    z-index: 9;
+    position: fixed;
+    width: 100%;
+    color: white;
+    background: rgba(255, 203, 0);
+    padding: 0 30px 0 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav div{
+    display: flex;
+    align-items: center;
+    transition: .5s;
+  }
+  nav div .fa-bars{
+    font-size: 30px;
+    cursor: pointer;
+    transition: .5s;
+    margin-right: 20px;
+  }
+  nav div h1{
+    color: white;
+    font-family: "Poppins", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+  }
+  nav div img{
+    width: 70px;
+    height: 70px;
+  }
+  nav.active div {
+  padding-left: 180px;
+  }
+  /* navbar end */
+
+  /* sidebar start */
+  .sidebar {
+    background-color: #1f1f1f;
+    backdrop: blur(40px);
+    backdrop-filter: blur(40px);
+    width: 80px;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    padding: 0 14px;
+    transition: .5s;
+  }
+  .sidebar.active{
+    width: 260px;
+  }
+  .sidebar .logo-menu{
+    display: flex;
+    align-items: center;
+    height: 75px;
+  }
+  .sidebar .logo-menu .logo{
+    color: white;
+    font-family: "Poppins", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    pointer-events: none;
+    opacity: 0;
+    transition : .3s;
+  }
+   .sidebar.active .logo-menu .logo{
+    opacity: 1;
+    transition-delay: .2s
+   }
+  .sidebar .logo-menu img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    line-height: 40px;
+    color: white;
+    transition : .5s;
+  }
+  .sidebar.active .logo-menu img{
+    left: 70%
+  }
+  .sidebar .list{
+    margin-top: 10px;
+  }
+  .list li{
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    line-height: 50px; 
+  }
+  .list li a{
+    color: white;
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    display: flex;
+    align-items:center;
+    white-space: nowrap;
+    border-radius: 6px;
+    transition: .5s;
+  }
+  .list a i{
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+  .list li.active a,
+  .list li a:hover {
+  background-color: rgba(255, 255, 255, .2);
+
+  }
+.sidebar .list li span{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.sidebar.active .list li span{
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: calc(.1s * var(--i));
+}
+  /* sidebar end */
+
+    /* hero section start */
+  section {
+    padding: 100px 20px 0 100px;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .main {
+    display: flex;
+    padding: 0 40px;
+    height: 100%;
+    flex-direction: column;
+  }
+  .main .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+  }
+  .main .content div{
+    display: flex;
+    align-items: center;
+  }
+  .container.active .main .content,
+  .container.active .main .content-profil{
+      padding-left: 170px;
+  }
+  .main .content .button a{
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: white;
+    border-radius: 5px;
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+  }
+  .main .content .button a:nth-child(1){
+    background-color: rgba(59, 182, 92);
+  }
+  .main .content .button a:nth-child(1):hover{
+    background-color: rgba(59, 182, 92, .8);
+  }
+  .main .content .button a:nth-child(2){
+    background-color: rgba(204, 0, 24);
+  }
+  .main .content .button a:nth-child(2):hover{
+    background-color: rgba(204, 0, 24, .8);
+  }
+  .main .content input{
+    width: 400px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin: 0 10px;
+    box-shadow: 3px 3px 6px rgba(213, 213, 213), -3px -3px 6px rgba(213, 213, 213);
+  }
+  .main input:hover{
+    box-shadow: 5px 5px 10px rgba(213, 213, 213), -5px -5px 10px rgba(213, 213, 213);
+  }
+  .main input:focus{
+    box-shadow:  5px 5px 10px rgba(213, 213, 213),  -5px -5px 10px rgba(213, 213, 213);
+  }
+  .main .content .fa-magnifying-glass{
+    font-size: 20px;
+  }
+
+  /* profil siswa */
+  .content-profil{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+  }
+  .profil-siswa{
+    margin: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 3px 3px 6px rgba(213, 213, 213), -3px -3px 6px rgba(213, 213, 213);
+    padding-bottom: 10px;
+    border-radius: 10px;
+    transition: .2s;
+  }
+  .profil-siswa:hover{
+    box-shadow: 5px 5px 10px rgba(213, 213, 213), -5px -5px 10px rgba(213, 213, 213);
+    transform: scale(1.01);
+  }
+  .profil-siswa img{
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+  .profil-siswa h1{
+    font-family: "Poppins", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+  }
+  .profil-siswa p{
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .5);
+  }
+  
+
+    /* hero section end */
