@@ -6,7 +6,6 @@
     list-style: none;
     resize: none;
     outline: none;
-    border: none;
   }
 
 
@@ -21,10 +20,11 @@
     position: fixed;
     width: 100%;
     color: white;
-    background: rgba(255, 203, 0);
+    background: white;
     padding: 0 30px 0 100px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(213, 213, 213);
   }
   nav div{
     display: flex;
@@ -36,9 +36,10 @@
     cursor: pointer;
     transition: .5s;
     margin-right: 20px;
+    color: black;
   }
   nav div h1{
-    color: white;
+    color: black;
     font-family: "Poppins", system-ui;
     font-weight: bold;
     font-style: normal;
@@ -55,14 +56,13 @@
 
   /* sidebar start */
   .sidebar {
-    background-color: #1f1f1f;
-    backdrop: blur(40px);
-    backdrop-filter: blur(40px);
+    background-color: rgba(255, 203, 0);
+    border-radius: 0 20px 20px 0;
     width: 80px;
     height: 100%;
     z-index: 10;
     position: fixed;
-    padding: 0 14px;
+    padding: 0 0 0 14px;
     transition: .5s;
   }
   .sidebar.active{
@@ -117,7 +117,7 @@
     display: flex;
     align-items:center;
     white-space: nowrap;
-    border-radius: 6px;
+    border-radius: 20px 0 0 20px;
     transition: .5s;
   }
   .list a i{
@@ -128,8 +128,8 @@
   }
   .list li.active a,
   .list li a:hover {
-  background-color: rgba(255, 255, 255, .2);
-
+  background-color: #fff;
+  color: black;
   }
 .sidebar .list li span{
   opacity: 0;
@@ -151,7 +151,6 @@
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
     padding: 0 40px;
   }
   .main {
@@ -166,6 +165,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
     transition: .5s;
   }
   .container.active .main .content{
@@ -181,24 +182,26 @@
   .content .input{
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    padding-right: 200px;
     transition: .5s;
+    justify-content: center;
+  }
+  .input1, .input2{
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
   }
   .container.active .main .content .input{
     padding-right: 0;
   }
-  .input div {
+  .input .input1 div, .input .input2 div {
     width: 500px;
     padding-bottom: 10px;;
     display: flex;
     flex-direction: column;
     transition: .5s;
   }
-  .input input{
+  .input .input1 input, .input .input2 input{
     
     height: 40px;
     padding: 0 10px;
@@ -206,17 +209,17 @@
     border: 1px solid #ccc;
     outline: none;
   }
-  .input label{
+  .input .input1 label, .input .input2 label{
     margin-bottom: 5px;
     font-family: "Poppins", system-ui;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
   }
-  .input .nis-nisn{
+  .input1 .nis-nisn{
     display: flex;
   }
-  .input .nis-nisn input:first-child{
+  .input1 .nis-nisn input:first-child{
     width: 245px;
     height: 40px;
     padding: 0 10px;
@@ -224,17 +227,17 @@
     border-radius: 5px;
     outline: none;
   }
-  .input .nis-nisn input:last-child{
+  .input1 .nis-nisn input:last-child{
     width: 245px;
     height: 40px;
     padding: 0 10px;
     border-radius: 5px;
     outline: none;
   }
-  .input .place-date{
+  .input2 .place-date{
     display: flex;
   }
-  .input .place-date .place{
+  .input2 .place-date .place{
     width: 340px;
     height: 40px;
     padding: 0 10px;
@@ -242,14 +245,14 @@
     border-radius: 5px;
     outline: none;
   }
-  .input .place-date .date{
+  .input2 .place-date .date{
     width: 150px;
     height: 40px;
     padding: 0 10px;
     border-radius: 5px;
     outline: none;
   }
-  .input input[type="file"]{
+  .input1 input[type="file"]{
     display: none;
   }
   .upload{
@@ -294,12 +297,13 @@
   .button{
     width: 100%;
     display: flex;
+    justify-content: center;
   }
   .button a{
     width: 200px;
     height: 40px;
     border-radius: 5px;
-    margin: 0 10px;
+    margin: 10px 10px;
     display: flex;
     color: white;
     align-items: center;

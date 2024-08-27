@@ -21,10 +21,11 @@
     position: fixed;
     width: 100%;
     color: white;
-    background: rgba(255, 203, 0);
+    background: white;
     padding: 0 30px 0 100px;
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(213, 213, 213);
   }
   nav div{
     display: flex;
@@ -36,9 +37,10 @@
     cursor: pointer;
     transition: .5s;
     margin-right: 20px;
+    color: black;
   }
   nav div h1{
-    color: white;
+    color: black;
     font-family: "Poppins", system-ui;
     font-weight: bold;
     font-style: normal;
@@ -55,14 +57,13 @@
 
   /* sidebar start */
   .sidebar {
-    background-color: #1f1f1f;
-    backdrop: blur(40px);
-    backdrop-filter: blur(40px);
+    background-color: rgba(255, 203, 0);
+    border-radius: 0 20px 20px 0;
     width: 80px;
     height: 100%;
     z-index: 10;
     position: fixed;
-    padding: 0 14px;
+    padding: 0 0 0 14px;
     transition: .5s;
   }
   .sidebar.active{
@@ -118,7 +119,7 @@
     display: flex;
     align-items:center;
     white-space: nowrap;
-    border-radius: 6px;
+    border-radius: 20px 0 0 20px;
     transition: .5s;
   }
   .list a i{
@@ -129,8 +130,8 @@
   }
   .list li.active a,
   .list li a:hover {
-  background-color: rgba(255, 255, 255, .2);
-
+  background-color: #fff;
+  color: black;
   }
 .sidebar .list li span{
   opacity: 0;
