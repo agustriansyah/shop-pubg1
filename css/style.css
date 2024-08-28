@@ -6,7 +6,7 @@
     list-style: none;
     resize: none;
     outline: none;
-    border: none;
+    border: 2px solid black;
   }
 
 
@@ -150,7 +150,6 @@
     height: 100vh;
     padding: 100px 20px 0 100px;
   }
-  
   .container {
     width: 100%;
     height: 100%;
@@ -159,9 +158,22 @@
   }
   .main {
     display: flex;
+    padding: 0 40px;
+    height: 100%;
+    flex-direction: column;
+    transition: .5s;
   }
-  .main .content{
-    background-color: rgba(204, 0, 24);
+  .container.active .main{
+    padding-left: 170px;
+}
+  .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .main .card{
+    width: 40%;
+    background-color: white;
     box-shadow: 5px 5px 10px grey;
     margin: 0 10px;
     border-radius: 10px;
@@ -169,28 +181,24 @@
     justify-content: space-around;
     flex-direction: column;
     transition: .5s;
-    padding: 20px;
   }
-  .main .content:nth-child(2){
-    background-color: rgba(59, 182, 92);
-  }
-  .main .content:nth-child(3){
-    background-color: rgba(48, 83, 194);
+  .container.active .main .card{
+    width: 30%;
   }
   
-  .main .content .title h1{
-    color: white;
+  .main .card .title h1{
+    color: black;
     font-family: "Poppins", system-ui;
     font-weight: 300;
     font-style: normal;
     font-size: 30px;
   }
-  .main .content .title-content{
+  .main .card .title-content{
     display: flex;
   }
   .title-content h1{
     font-size: 120px;
-    color: white;
+    color: black;
     font-family: monospace;
     margin-right: 60px;
     transition: .5s;
@@ -200,8 +208,6 @@
   }
   .title-content i{
     font-size: 140px;
-    color: rgba(228, 228, 228, 0.5);
-  }
-  .container.active .main .content{
-    transform: translateX(170px);
+    color: rgba(255, 203, 0);
+    transition: .5s;
   }
