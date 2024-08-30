@@ -27,16 +27,18 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 0 5px 10px rgba(213, 213, 213);
+    transition: .5s;
+  }
+  nav.active {
+  padding-left: 280px;
   }
   nav div{
     display: flex;
     align-items: center;
-    transition: .5s;
   }
   nav div .fa-bars{
     font-size: 30px;
     cursor: pointer;
-    transition: .5s;
     margin-right: 20px;
     color: black;
   }
@@ -50,9 +52,6 @@
   nav div img{
     width: 70px;
     height: 70px;
-  }
-  nav.active div {
-  padding-left: 180px;
   }
   /* navbar end */
 
@@ -148,26 +147,24 @@
 
     /* hero section start */
   section {
-    padding: 100px 20px 0 100px;
+    padding-top: 10vh;
+    padding-left:80px;
+    transition: .5s;
+  }
+  section.active {
+    padding-left: 260px;
   }
   .container {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
+    padding: 20px;
   }
   .main {
     display: flex;
     height: 100%;
-    width: 100%;
     flex-direction: column;
-    transition: .5s; 
   }
-  .container.active .main{
-    padding-left: 190px;
-  }
-  .main .content{
+  .content{
     width:100%;
     display: flex;
     justify-content: space-between;
@@ -184,7 +181,6 @@
     padding: 5px 20px;
     background-color:rgba(204, 0, 24) ;
     border-radius: 6px;
-    transition: .5s;
   }
   .main .content div a i{
     margin-right: 10px;
