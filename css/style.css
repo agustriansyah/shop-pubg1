@@ -204,7 +204,7 @@
   }
   .title-content i{
     font-size: 150px;
-    color: rgba(143, 143, 143, 0.5);
+    color: rgba(255, 203, 0);
     transition: .5s;
   } 
   section.active .title-content i{

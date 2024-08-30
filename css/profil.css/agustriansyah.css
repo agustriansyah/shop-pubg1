@@ -222,6 +222,7 @@
     background-color: rgba(255, 203, 0);
     border-radius: 0 10px 0 0;
     padding-right: 250px;
+    position: relative;
   }
   .profil1 .text-profil h1{
     font-family: "Poppins", system-ui;
@@ -235,6 +236,27 @@
     font-style: normal;
     font-size: 14px;
     color: rgba(0, 0, 0, .5);
+  }
+  .profil1 .text-profil a{
+    position: absolute;
+    left: 80%;
+    padding: 5px 15px;
+    display: flex;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: "Poppins", system-ui;
+    align-items: center;
+    font-weight: 500;
+    color: black;
+    background-color: rgba(255, 255, 255);
+    box-shadow: 5px 5px 10px grey;
+    transition: .5s;
+  }
+  .text-profil a:hover{
+    background-color: yellow;
+  }
+  .text-profil a .fa-regular{
+    margin-left: 5px;
   }
   .profil1 .text-detail table{
     font-family: "Poppins", system-ui;
